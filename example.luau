@@ -2,7 +2,7 @@
 -- Apple UI - Gen2 Example LocalScript
 
 -- Load the library
-local library = loadstring(game:HttpGet("YOUR_LIBRARY_URL_HERE"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/TrueVelocity/New-Apple-Library/refs/heads/main/source.Luau"))()
 
 -- Create the main window
 local window = library:init("My Apple UI", true, Enum.KeyCode.RightShift, true)
