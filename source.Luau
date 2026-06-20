@@ -881,7 +881,9 @@ end
     end
 end
 
+return window
 end
+
 
 function sec:Keybind(opts, callback)
     opts = opts or {}
@@ -3250,6 +3252,6 @@ end
 
 window.ContextMenu = ContextMenu
 
-return library
+return lib = {}
 
 
