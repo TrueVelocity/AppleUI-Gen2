@@ -52,13 +52,13 @@ local function CreateElementAPI(obj)
     end
 
     function api:SetImage(icon)
-        local assetId = ResolveIcon(icon) or icon
+        local assetId = library.ResolveIcon(icon) or icon
         if not assetId then return end
 
         if obj:FindFirstChild("icon") then
             obj.icon.Image = "rbxassetid://" .. assetId
         else
-            ApplyIconToElement(obj, assetId)
+            library.ApplyIconToElement(obj, assetId)
         end
     end
 
@@ -2150,7 +2150,7 @@ function window:NotifySonoma(opts)
         iconImg.BackgroundTransparency = 1
         iconImg.Size = UDim2.new(0, 32, 0, 32)
         iconImg.Position = UDim2.new(0, 12, 0.5, -16)
-        iconImg.Image = "rbxassetid://" .. (ResolveIcon(icon) or icon)
+        iconImg.Image = "rbxassetid://" .. (library.ResolveIcon(icon) or icon)
         iconImg.ImageColor3 = Color3.fromRGB(255, 255, 255)
         iconImg.ZIndex = 52
     end
@@ -2638,7 +2638,7 @@ function window:Sheet(opts)
         ic.BackgroundTransparency = 1
         ic.Size = UDim2.new(0, 40, 0, 40)
         ic.Position = UDim2.new(0, 20, 0, 20)
-        ic.Image = "rbxassetid://" .. (ResolveIcon(icon) or icon)
+        ic.Image = "rbxassetid://" .. (library.ResolveIcon(icon) or icon)
         ic.ImageColor3 = Color3.fromRGB(95, 95, 95)
         ic.ZIndex = 202
     end
