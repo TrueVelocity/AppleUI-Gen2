@@ -2,8 +2,7 @@ library = {}
 -- LUCIDE ICONS
 local Lucide = loadstring(game:HttpGet("https://raw.githubusercontent.com/Mabil-YT/New-Apple-Library/refs/heads/main/icons.lua"))()
 
--- Resolve icon name or asset ID
-local function ResolveIcon(icon)
+function library.ResolveIcon(icon)
     if typeof(icon) == "number" then
         return icon
     end
@@ -17,8 +16,7 @@ local function ResolveIcon(icon)
     return nil
 end
 
--- Attach icon to any element
-local function ApplyIconToElement(element, assetId)
+function library.ApplyIconToElement(element, assetId)
     if not assetId then return end
 
     if element:FindFirstChild("icon") then
